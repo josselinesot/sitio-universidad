@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Universidad</title>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <!-- VIDEO DE FONDO -->
+        <video autoplay muted loop class="video-bg">
+            <source src="videos/video-promocional2.mp4" type="video/mp4">
+        </video>
+    
+        <!-- OVERLAY -->
+        <div class="overlay"></div>
+    
+        <div class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="images/logo/LogoUMI-Blanco.png" alt="UMI">
+            </div>
+        
+            <!-- DERECHA -->
+            <div class="nav-right">
+                
+                <div class="nav-links">
+                    <a href="#">Programs</a>
+                    <a href="#">Campuses</a>
+                    <a href="#">Admissions</a>
+                </div>
+        
+                <div class="menu" onclick="abrirMenu()">
+                    <span>Menu</span>
+                    <div class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+    
+        <!-- CONTENIDO -->
+        <div class="content">
+    
+            <h3 class="script-text">Excelentes en</h3>
+    
+            <h1>Hospitalidad y lujo<br>educación de negocios</h1>
+    
+            <p class="subtitle">
+                UMI offers career-focused programs designed to develop global leaders 
+                in hospitality and luxury business, combining academic excellence 
+                with real-world experience.
+            </p>
+    
+            <div class="buttons">
+                <button class="btn1">Descarga el folleto</button>
+                <button class="btn2">Acerca de UMI</button>
+            </div>
+    
+        </div>
+    
+    </section>
+    <!-- MENU FULLSCREEN -->
+            <div class="menu-full" id="menuFull">
+
+                <div class="menu-header">
+                    <button class="close-btn" onclick="cerrarMenu()">Cerrar ✕</button>
+                </div>
+
+                <div class="menu-content">
+
+                    <div class="menu-left">
+                        <h2>Programas</h2>
+                        <h2>Campus</h2>
+                        <h2>Admisiones</h2>
+                        <h2>Acerca de</h2>
+                        <h2>Alumado</h2>
+                    </div>
+
+                    <div class="menu-right">
+                        <p>Bachelor of Science in Hospitality Business</p>
+                        <p>Luxury Business Programs</p>
+                        <p>Master Programs</p>
+                    </div>
+
+                </div>         
+            </div>
+    <script>
+        function abrirMenu(){
+        document.getElementById("menuFull").classList.add("active");
+        document.querySelector(".navbar").style.opacity = "0";
+    }
+
+    function cerrarMenu(){
+        document.getElementById("menuFull").classList.remove("active");
+        document.querySelector(".navbar").style.opacity = "1";
+    }
+        </script>
+</body>
+</html>
