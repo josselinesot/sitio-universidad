@@ -8,12 +8,12 @@
 </head>
 
 <body>
-
+ 
     <section class="hero">
 
         <!-- VIDEO DE FONDO -->
         <video autoplay muted loop class="video-bg">
-            <source src="videos/video-promocional2.mp4" type="video/mp4">
+            <source src="videos/inicio_alumnos.mp4" type="video/mp4">
         </video>
     
         <!-- OVERLAY -->
@@ -30,9 +30,9 @@
             <div class="nav-right">
                 
                 <div class="nav-links">
-                    <a href="#">Programs</a>
-                    <a href="#">Campuses</a>
-                    <a href="#">Admissions</a>
+                    <a href="#">Programas</a>
+                    <a href="#">Campus</a>
+                    <a href="#">Admisiones</a>
                 </div>
         
                 <div class="menu" onclick="abrirMenu()">
@@ -69,6 +69,162 @@
         </div>
     
     </section>
+    <section class="destinations-section" id="program-detail"></section>
+
+        <div class="programs-title">
+            <h2>Explora nuestros programas</h2>
+            <p>Discover our diverse programs, from hospitality and luxury to finance and innovation.</p>
+        </div>
+    
+        <div class="programs-grid">
+    
+            <div class="card" onclick="mostrarProgramas('licenciatura')">
+                <img src="images/IMAGEN.jpg">
+                <h3>Licenciaturas</h3>
+            </div>
+    
+            <div class="card" onclick="mostrarProgramas('posgrado')">
+                <img src="images/posgrado.jpg">
+                <h3>Posgrados</h3>
+            </div>
+    
+            <div class="card" onclick="mostrarProgramas('ejecutivo')">
+                <img src="images/edu_continua.jpg">
+                <h3>Educacion continua/ejecutiva</h3>
+            </div>
+    
+            <div class="card" onclick="mostrarProgramas('online')">
+                <img src="images/en_linea.jpg">
+                <h3>Cursos en linea</h3>
+            </div>
+    
+        </div>
+    
+    </section>
+    <section class="features">
+
+        <div class="feature">
+            <h3>🌍 Enfoque global</h3>
+            <p>Programas con visión internacional</p>
+        </div>
+    
+        <div class="feature">
+            <h3>🎓 Excelencia académica</h3>
+            <p>Profesores altamente capacitados</p>
+        </div>
+    
+        <div class="feature">
+            <h3>💼 Alta empleabilidad</h3>
+            <p>Conexión con empresas reales</p>
+        </div>
+    
+        <div class="feature">
+            <h3>🏨 Experiencia real</h3>
+            <p>Aprendizaje práctico en campo</p>
+        </div>
+    
+    </section>
+
+    <!-- SECCIÓN DESTINOS -->
+    <section class="destinations-section">
+
+        <div class="section-intro">
+            <p class="dest-label">Nuestros destinos</p>
+            <h2 class="dest-title">Acapulco, donde el<br>Pacífico te enamora</h2>
+        </div>
+
+        <!-- DESTINO 1 -->
+        <div class="dest-item">
+            <div class="dest-img-wrap">
+                <img src="images/foto1.jpg" alt="Costa Amalfitana">
+            </div>
+            <div class="dest-info">
+                <span class="dest-num">01</span>
+                <span class="dest-tag">México · Acapulco</span>
+                <h3>Palacio</h3>
+                <p>Una franja de costa espectacular al sur de Nápoles, con pueblos de colores que se aferran a los acantilados y vistas al mar Tirreno que quitan el aliento.</p>
+                <div class="dest-features">
+                    <div class="dest-feature"><span class="dot"></span> 7 días / 6 noches</div>
+                    <div class="dest-feature"><span class="dot"></span> Todo incluido</div>
+                    <div class="dest-feature"><span class="dot"></span> Vuelo directo</div>
+                </div>
+                <a href="#" class="dest-cta">Explorar destino →</a>
+            </div>
+        </div>
+
+        <!-- DESTINO 2 -->
+        <div class="dest-item dest-reverse">
+            <div class="dest-img-wrap">
+                <img src="images/foto2.jpg" alt="Bali">
+            </div>
+            <div class="dest-info">
+                <span class="dest-num">02</span>
+                <span class="dest-tag">México · Acapulco</span>
+                <h3>Pierre</h3>
+                <p>Isla de los dioses, donde los templos entre arrozales, las playas volcánicas y la cultura hindú crean una atmósfera mística sin igual en el mundo.</p>
+                <div class="dest-features">
+                    <div class="dest-feature"><span class="dot"></span> 10 días / 9 noches</div>
+                    <div class="dest-feature"><span class="dot"></span> Hotel boutique</div>
+                    <div class="dest-feature"><span class="dot"></span> Guía local</div>
+                </div>
+                <a href="#" class="dest-cta">Explorar destino →</a>
+            </div>
+        </div>
+
+        <!-- DESTINO 3 -->
+        <div class="dest-item dest-last">
+            <div class="dest-img-wrap">
+                <img src="images/foto3.jpg" alt="Dubái">
+            </div>
+            <div class="dest-info">
+                <span class="dest-num">03</span>
+                <span class="dest-tag">México · Acapulco</span>
+                <h3>Princess</h3>
+                <p>Donde el desierto dorado se funde con la arquitectura del futuro. Una ciudad de récords mundiales, gastronomía de vanguardia y hospitalidad sin fronteras.</p>
+                <div class="dest-features">
+                    <div class="dest-feature"><span class="dot"></span> 5 días / 4 noches</div>
+                    <div class="dest-feature"><span class="dot"></span> Hotel 5 estrellas</div>
+                    <div class="dest-feature"><span class="dot"></span> Traslados incluidos</div>
+                </div>
+                <a href="#" class="dest-cta">Explorar destino →</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="testimonials">
+
+        <h2>Lo que dicen nuestros alumnos</h2>
+    
+        <div class="testimonials-grid">
+    
+            <div class="testimonial">
+                <p>"Una experiencia increíble que cambió mi vida."</p>
+                <h4>- María López</h4>
+            </div>
+    
+            <div class="testimonial">
+                <p>"Aprendí con profesionales reales."</p>
+                <h4>- Carlos Pérez</h4>
+            </div>
+    
+            <div class="testimonial">
+                <p>"La mejor decisión que he tomado."</p>
+                <h4>- Ana Torres</h4>
+            </div>
+    
+        </div>
+    
+    </section>
+    <section class="careers" id="careersSection">
+
+        <h2 id="tituloCarreras">Programas</h2>
+    
+        <div class="careers-grid" id="careersGrid"></div>
+    
+    </section>
+
+
+    
     <!-- MENU FULLSCREEN -->
             <div class="menu-full" id="menuFull">
 
@@ -94,6 +250,10 @@
 
                 </div>         
             </div>
+            <section class="cta">
+                <h2>¿Listo para comenzar tu futuro?</h2>
+                <button>Solicitar información</button>
+            </section>
     <script>
         function abrirMenu(){
         document.getElementById("menuFull").classList.add("active");
@@ -105,5 +265,6 @@
         document.querySelector(".navbar").style.opacity = "1";
     }
         </script>
+        <script src="js/main.js"></script>
 </body>
 </html>
