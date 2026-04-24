@@ -3,10 +3,13 @@
 <head>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/campus.css">
+    
 
     <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <meta charset="UTF-8">
     <title>Universidad</title>
@@ -30,12 +33,12 @@
 
         <div class="nav-right">
             <div class="nav-links">
-                <a href="#">Programas</a>
-                <a href="campus_acapulco.html">Campus</a>
+                <a href="#" onclick="abrirMenu('programas'); return false;">Programas</a>
+                <a href="#" onclick="abrirMenu('campus'); return false;">Campus</a>
                 <a href="#">Admisiones</a>
             </div>
 
-            <div class="menu" onclick="abrirMenu()">
+            <div class="menu" onclick="abrirMenu('campus')">
                 <span>Menu</span>
                 <div class="hamburger">
                     <div></div><div></div><div></div>
@@ -57,7 +60,83 @@
 
 </section>
 
-<section class="intro-campus">
+<section class="intro-campus"></section>
+
+<section class="jornadas">
+
+        <div class="jornadas-container">
+    
+            <div class="jornadas-img">
+                <img src="images/foto4.jpg" alt="">
+            </div>
+    
+            <div class="jornadas-content">
+    
+                <h2>Próximas jornadas<br>de puertas abiertas</h2>
+    
+                <p class="jornadas-desc">
+                    Descubre nuestro campus en persona.
+                </p>
+    
+                <div class="evento-item">
+                    <span class="evento-label">JORNADAS</span>
+                    <p class="evento-fecha">17 de mayo 2026</p>
+                    <p class="evento-detalle">09:00 - 14:00</p>
+                    <a href="#" class="evento-link">Regístrate</a>
+                </div>
+    
+                <div class="evento-item">
+                    <span class="evento-label">JORNADAS</span>
+                    <p class="evento-fecha">21 de junio 2026</p>
+                    <p class="evento-detalle">09:00 - 14:00</p>
+                    <a href="#" class="evento-link">Regístrate</a>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    <section class="instalaciones">
+
+        <div class="instalaciones-container">
+    
+            <div class="instalaciones-texto">
+                <h2>Instalaciones increíbles</h2>
+                <p>
+                    Disfruta de espacios modernos y diseñados para tu crecimiento.
+                </p>
+            </div>
+    
+            <div class="instalaciones-cta">
+                <a href="#" class="btn-instalaciones">Ver instalaciones</a>
+            </div>
+    
+        </div>
+    
+    </section>
+    <section class="vida-campus">
+
+        <div class="vida-inner">
+    
+            <img src="images/foto5.jpg" class="vida-bg-img">
+    
+            <div class="vida-overlay"></div>
+    
+            <div class="vida-texto">
+                <h2>Estudios en Acapulco</h2>
+                <p>
+                    Vive una experiencia única frente al mar.
+                </p>
+            </div>
+    
+            <div class="vida-cta">
+                <a href="#" class="btn-vida">Conoce más</a>
+            </div>
+    
+        </div>
+    
+    </section>
 
     <div class="intro-container">
 
@@ -113,13 +192,11 @@
 
     <div class="footer-container">
 
-        <!-- IZQUIERDA -->
         <div class="footer-left">
             <h2>UMI</h2>
             <p>Universidad Mundo Imperial</p>
         </div>
 
-        <!-- LINKS -->
         <div class="footer-links">
 
             <div>
@@ -145,17 +222,19 @@
 
         </div>
 
-        <!-- REDES -->
         <div class="footer-social">
             <h4>Síguenos</h4>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>TikTok</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+
         </div>
 
     </div>
 
-    <!-- LINEA FINAL -->
     <div class="footer-bottom">
         <p>© 2026 UMI. Todos los derechos reservados.</p>
     </div>
@@ -179,15 +258,14 @@
 
         <!-- IZQUIERDA -->
         <div class="menu-left">
-    <h2 onclick="cambiarSeccion('programas')">Programas</h2>
-    <h2 class="active" onclick="cambiarSeccion('campus')">Campus</h2>
-    <h2 onclick="cambiarSeccion('admisiones')">Admisiones</h2>
-    <h2 onclick="cambiarSeccion('acerca')">Acerca de</h2>
-    <h2>Alumnado</h2>
-</div>
-
+        <h2 onclick="cambiarSeccion('programas', this)">Programas</h2>
+        <h2 class="active" onclick="cambiarSeccion('campus', this)">Campus</h2>
+        <h2 onclick="cambiarSeccion('admisiones', this)">Admisiones</h2>
+        <h2 onclick="cambiarSeccion('acerca', this)">Acerca de</h2>
+        <h2 onclick="cambiarSeccion('alumnado', this)">Alumnado</h2>
+        </div>
         <!-- DERECHA  -->
-        <div class="menu-right">
+        <div class="menu-right" id="menuContent">
 
             <a href="campus_acapulco.html" class="campus-card">
                 <div class="img-container">
@@ -196,6 +274,21 @@
                 <h3>Acapulco</h3>
                 <p>Guerrero, México</p>
             </a>
+            <div class="menu-social">
+
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            
+                <a href="https://www.tiktok.com" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            
+            </div>
 
         </div>
 
@@ -209,19 +302,31 @@ function abrirMenu(seccion = null){
     const menu = document.getElementById("menuFull");
     menu.classList.add("active");
 
-    // Reset estilos
-    document.querySelectorAll(".menu-left h2").forEach(el => {
-        el.classList.remove("active");
-    });
+    const items = document.querySelectorAll(".menu-left h2");
 
-    // Activar sección
+    items.forEach(el => el.classList.remove("active"));
+
     if(seccion === "campus"){
-        document.querySelector(".menu-left h2:nth-child(2)").classList.add("active");
+        items[1].classList.add("active");
+        cambiarSeccion('campus', items[1]);
+    }
+
+    if(seccion === "programas"){
+        items[0].classList.add("active");
+        cambiarSeccion('programas', items[0]);
     }
 }
 
-function cerrarMenu(){
-    document.getElementById("menuFull").classList.remove("active");
+function irAPrograma(tipo){
+    cerrarMenu();
+
+    mostrarProgramas(tipo);
+
+    setTimeout(() => {
+        document.getElementById("careersSection").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 300);
 }
 function mostrarProgramas(tipo){
     const contenedor = document.getElementById("careersGrid");
@@ -246,6 +351,10 @@ function mostrarProgramas(tipo){
     document.getElementById("careersSection").scrollIntoView({
         behavior: "smooth"
     });
+}
+function cerrarMenu(){
+    const menu = document.getElementById("menuFull");
+    menu.classList.remove("active");
 }
 </script>
 <script>
@@ -300,5 +409,115 @@ function animate(){
 
 animate();
 </script>
+<script>
+    function cambiarSeccion(seccion, el = null){
+
+const contenido = document.getElementById("menuContent");
+
+// reset active
+document.querySelectorAll(".menu-left h2").forEach(item => {
+    item.classList.remove("active");
+});
+
+// activar el clickeado
+if(el){
+    el.classList.add("active");
+}
+
+// contenido dinámico
+if(seccion === "campus"){
+    contenido.innerHTML = `
+        <a href="campus_acapulco.html" class="campus-card">
+            <div class="img-container">
+                <img src="images/foto1.jpg">
+            </div>
+            <h3>Acapulco</h3>
+            <p>Guerrero, México</p>
+        </a>
+    `;
+}
+
+if(seccion === "programas"){
+    contenido.innerHTML = `
+    <div class="menu-programas">
+
+        <div class="col">
+            <span class="menu-title">LICENCIATURAS</span>
+            <p>Administración Hotelera</p>
+            <p>Negocios Internacionales</p>
+            <p>Turismo de Lujo</p>
+        </div>
+
+        <div class="col">
+            <span class="menu-title">POSGRADOS</span>
+            <p>Maestría en Hospitality</p>
+            <p>Maestría en Finanzas</p>
+            <p>Maestría en Marketing</p>
+        </div>
+
+        <div class="col">
+            <span class="menu-title">EDUCACIÓN EJECUTIVA</span>
+            <p>Diplomado en Negocios</p>
+            <p>Gestión de lujo</p>
+            <p>Leadership Program</p>
+        </div>
+
+        <div class="col">
+            <span class="menu-title">CURSOS</span>
+            <p>Curso de Hospitality</p>
+            <p>Curso de lujo</p>
+            <p>Online programs</p>
+        </div>
+
+    </div>
+    `;
+}
+
+if(seccion === "admisiones"){
+    contenido.innerHTML = `
+        <div class="menu-programas">
+            <div class="col">
+                <p>Proceso</p>
+                <p>Becas</p>
+            </div>
+            <div class="col">
+                <p>Requisitos</p>
+                <p>Costos</p>
+            </div>
+        </div>
+    `;
+}
+
+if(seccion === "acerca"){
+    contenido.innerHTML = `
+        <div class="menu-programas">
+            <div class="col">
+                <p>Historia</p>
+                <p>Misión</p>
+            </div>
+            <div class="col">
+                <p>Visión</p>
+                <p>Valores</p>
+            </div>
+        </div>
+    `;
+}
+
+if(seccion === "alumnado"){
+    contenido.innerHTML = `
+        <div class="menu-programas">
+            <div class="col">
+                <p>Vida estudiantil</p>
+                <p>Eventos</p>
+            </div>
+            <div class="col">
+                <p>Comunidad</p>
+                <p>Servicios</p>
+            </div>
+        </div>
+    `;
+}
+}
+    </script>
 </body>
 </html>
